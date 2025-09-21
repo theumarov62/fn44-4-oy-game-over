@@ -93,11 +93,13 @@ elDark.addEventListener("click", () => {
 
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
-    elDark.classList.add("border-black");
+    elDark.classList.add("border-white");
     elDark.classList.add("border-[1px]");
+    elDark.textContent = "Light";
   } else {
     localStorage.setItem("theme", "light");
-    elDark.classList.add("border-white");
+    elDark.classList.add("border-black");
+    elDark.textContent = "Dark";
   }
 });
 renderCars();

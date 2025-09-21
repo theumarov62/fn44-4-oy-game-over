@@ -51,10 +51,6 @@ function clearInputs() {
 
 function renderCards() {
   cardsContainer.innerHTML = "";
-  if (!cars.length) {
-    cardsContainer.innerHTML = `<div class="col-span-full text-center text-gray-500">Hech narsa yo'q. Yangi mashina qo'shing.</div>`;
-    return;
-  }
 
   cars.forEach((car, idx) => {
     const card = document.createElement("article");

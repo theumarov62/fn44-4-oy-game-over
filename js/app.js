@@ -49,19 +49,19 @@ function showDetails(car) {
   modal.classList.remove("hidden");
   modalTitle.textContent = car.name;
   modalBody.innerHTML = `
-    <p><strong>Trim:</strong> ${car.trim}</p>
-    <p><strong>Yil:</strong> ${car.year}</p>
-    <p><strong>Kategoriya:</strong> ${car.category}</p>
-    <p><strong>Darvozalar:</strong> ${car.doorCount}</p>
-    <p><strong>O‘rindiqlar:</strong> ${car.seatCount}</p>
-    <p><strong>Tezlik:</strong> ${car.maxSpeed}</p>
-    <p><strong>Acceleration:</strong> ${car.acceleration}</p>
-    <p><strong>Engine:</strong> ${car.engine}</p>
-    <p><strong>Horsepower:</strong> ${car.horsepower}</p>
-    <p><strong>Fuel Type:</strong> ${car.fuelType}</p>
-    <p><strong>Fuel Consumption:</strong> ${car.fuelConsumption}</p>
-    <p><strong>Country:</strong> ${car.country}</p>
-    <p><strong>Description:</strong> ${car.description}</p>
+    <p class="text-[black]"><strong>Trim:</strong> ${car.trim}</p>
+    <p class="text-[black]"><strong>Yil:</strong> ${car.year}</p>
+    <p class="text-[black]"><strong>Kategoriya:</strong> ${car.category}</p>
+    <p class="text-[black]"><strong>Darvozalar:</strong> ${car.doorCount}</p>
+    <p class="text-[black]"><strong>O‘rindiqlar:</strong> ${car.seatCount}</p>
+    <p class="text-[black]"><strong>Tezlik:</strong> ${car.maxSpeed}</p>
+    <p class="text-[black]"><strong>Acceleration:</strong> ${car.acceleration}</p>
+    <p class="text-[black]"><strong>Engine:</strong> ${car.engine}</p>
+    <p class="text-[black]"><strong>Horsepower:</strong> ${car.horsepower}</p>
+    <p class="text-[black]"><strong>Fuel Type:</strong> ${car.fuelType}</p>
+    <p class="text-[black]"><strong>Fuel Consumption:</strong> ${car.fuelConsumption}</p>
+    <p class="text-[black]"><strong>Country:</strong> ${car.country}</p>
+    <p class="text-[black]"><strong>Description:</strong> ${car.description}</p>
   `;
 }
 

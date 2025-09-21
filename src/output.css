@@ -375,6 +375,9 @@
   .gap-\[4px\] {
     gap: 4px;
   }
+  .gap-\[8px\] {
+    gap: 8px;
+  }
   .space-y-2 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -536,6 +539,9 @@
   }
   .break-words {
     overflow-wrap: break-word;
+  }
+  .text-\[black\] {
+    color: black;
   }
   .text-\[white\] {
     color: white;

@@ -9,32 +9,23 @@
       button {
         cursor: pointer;
       }
-
-      .dark {
-        background-color: black;
-        color: white;
-      }
     </style>
   </head>
   <body class="bg-gray-50 min-h-screen p-6">
-    <header class="max-w-4xl mx-auto text-center mb-6">
+    <header
+      class="max-w-4xl mx-auto text-center mb-6 flex flex-col items-center justify-center gap-[8px]"
+    >
       <h1 class="text-2xl font-semibold">
         O'zingiz xohlagan mashinani qo'shing
         <a href="../index.html" class="border-[1px] border-[black] rounded-2xl"
           >Asosiy sahifa</a
         >
       </h1>
-      <button
-        id="dark"
-        class="w-[90px] h-[30px] bg-black text-[white] rounded-[2px] cursor-pointer"
-      >
-        Dark
-      </button>
     </header>
 
     <form
       id="carForm"
-      class="max-w-5xl mx-auto bg-transparent  p-4 rounded-2xl shadow-sm"
+      class="max-w-5xl mx-auto bg-transparent p-4 rounded-2xl shadow-sm"
     >
       <div class="flex flex-wrap gap-3">
         <input

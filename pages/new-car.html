@@ -9,6 +9,11 @@
       button {
         cursor: pointer;
       }
+
+      .dark {
+        background-color: black;
+        color: white;
+      }
     </style>
   </head>
   <body class="bg-gray-50 min-h-screen p-6">
@@ -19,11 +24,17 @@
           >Asosiy sahifa</a
         >
       </h1>
+      <button
+        id="dark"
+        class="w-[90px] h-[30px] bg-black text-[white] rounded-[2px] cursor-pointer"
+      >
+        Dark
+      </button>
     </header>
 
     <form
       id="carForm"
-      class="max-w-5xl mx-auto bg-white p-4 rounded-2xl shadow-sm"
+      class="max-w-5xl mx-auto bg-transparent  p-4 rounded-2xl shadow-sm"
     >
       <div class="flex flex-wrap gap-3">
         <input

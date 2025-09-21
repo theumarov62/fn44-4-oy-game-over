@@ -4,20 +4,22 @@ const carsList = document.getElementById("cars-list");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalBody = document.getElementById("modal-body");
+const elDark = document.getElementById("dark");
 
 function renderCars() {
   carsList.innerHTML = "";
 
   cars.forEach((car, index) => {
     const card = document.createElement("div");
-    card.className = "bg-white shadow-md rounded-lg p-4";
+    card.className =
+      "bg-transparent shadow-md rounded-lg p-4 border-white border-[1px]";
 
     card.innerHTML = `
       <h3 class="text-xl font-bold mb-2">${car.name} <span class="text-gray-500">(${car.year})</span></h3>
-      <p class="text-gray-600"><strong>Trim:</strong> ${car.trim}</p>
-      <p class="text-gray-600"><strong>Tezlik:</strong> ${car.maxSpeed}</p>
-      <p class="text-gray-600"><strong>Ot kuchi:</strong> ${car.horsepower} HP</p>
-      <p class="text-gray-600 flex items-center">
+      <p class=""><strong>Trim:</strong> ${car.trim}</p>
+      <p class=""><strong>Tezlik:</strong> ${car.maxSpeed}</p>
+      <p class=""><strong>Ot kuchi:</strong> ${car.horsepower} HP</p>
+      <p class=" flex items-center">
         <strong>Rang:</strong> 
         <span class="w-5 h-5 rounded ml-2 mr-1" style="background:${car.color}"></span>
         ${car.colorName}
@@ -83,4 +85,19 @@ function deleteCar(index) {
   localStorage("delete", "del");
 }
 
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+elDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    elDark.classList.add("border-black");
+    elDark.classList.add("border-[1px]");
+  } else {
+    localStorage.setItem("theme", "light");
+    elDark.classList.add("border-white");
+  }
+});
 renderCars();

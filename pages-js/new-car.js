@@ -1,7 +1,7 @@
 const form = document.getElementById("carForm");
 const addBtn = document.getElementById("newCarButton");
 const cardsContainer = document.getElementById("cardsContainer");
-
+const elDark = document.getElementById("dark");
 const modal = document.getElementById("carModal");
 const modalContent = document.getElementById("modalContent");
 const modalTitle = document.getElementById("modalTitle");
@@ -212,4 +212,19 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 });
 
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+elDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    elDark.classList.add("border-black");
+    elDark.classList.add("border-[1px]");
+  } else {
+    localStorage.setItem("theme", "light");
+    elDark.classList.add("border-white");
+  }
+});
 renderCards();

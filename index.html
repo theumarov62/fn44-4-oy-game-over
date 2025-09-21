@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <title>Cars UI</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 min-h-screen p-6">
     <div class="flex items-center justify-center gap-[4px]">
@@ -18,7 +24,12 @@
         </a>
       </h2>
     </div>
-
+    <button
+      id="dark"
+      class="w-[90px] h-[30px] bg-black text-[white] rounded-[2px] cursor-pointer"
+    >
+      Dark
+    </button>
     <div
       id="cars-list"
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"

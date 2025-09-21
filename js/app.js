@@ -4,7 +4,6 @@ const carsList = document.getElementById("cars-list");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalBody = document.getElementById("modal-body");
-const elDark = document.getElementById("dark");
 
 function renderCars() {
   carsList.innerHTML = "";

@@ -30,7 +30,6 @@ function renderCars() {
       </div>
     `;
 
-
     card
       .querySelector(".btn-details")
       .addEventListener("click", () => showDetails(car));
@@ -82,6 +81,7 @@ function deleteCar(index) {
     cars.splice(index, 1);
     renderCars();
   }
+  localStorage("delete", "del");
 }
 
 renderCars();

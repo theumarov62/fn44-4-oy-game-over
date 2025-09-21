@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Cars</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <style>
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen p-6">
+    <header class="max-w-4xl mx-auto text-center mb-6">
+      <h1 class="text-2xl font-semibold">
+        O'zingiz xohlagan mashinani qo'shing
+        <a href="../index.html" class="border-[1px] border-[black] rounded-2xl"
+          >Asosiy sahifa</a
+        >
+      </h1>
+    </header>
+
+    <form
+      id="carForm"
+      class="max-w-5xl mx-auto bg-white p-4 rounded-2xl shadow-sm"
+    >
+      <div class="flex flex-wrap gap-3">
+        <input
+          id="carsName"
+          placeholder="Mashina nomi"
+          class="w-[220px] h-[38px] border-2 border-gray-300 rounded px-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+        />
+        <input
+          id="trim"
+          placeholder="Trim (LT)"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="generation"
+          placeholder="Generation"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="year"
+          placeholder="Year"
+          class="w-[100px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+
+        <input
+          id="color"
+          placeholder="Color (e.g. #4682b4)"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="colorName"
+          placeholder="Color name"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="category"
+          placeholder="Category"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="doorCount"
+          placeholder="Door Count"
+          class="w-[120px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+
+        <input
+          id="seatCount"
+          placeholder="Seat Count"
+          class="w-[120px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="maxSpeed"
+          placeholder="Max Speed"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="acceleration"
+          placeholder="Acceleration"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="engine"
+          placeholder="Engine"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+
+        <input
+          id="horsepower"
+          placeholder="Horse Power"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="fuelType"
+          placeholder="Fuel Type"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="fuelConsumtion"
+          placeholder="Fuel Consumption"
+          class="w-[160px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="country"
+          placeholder="Country"
+          class="w-[140px] h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+        <input
+          id="description"
+          placeholder="Description"
+          class="w-full h-[38px] border-2 border-gray-300 rounded px-3"
+        />
+      </div>
+
+      <!-- Add tugmasi (type=button — formni submit qilmaydi) -->
+      <div class="mt-4 text-right">
+        <button
+          id="newCarButton"
+          type="button"
+          class="px-4 py-2 bg-black text-white rounded-lg hover:opacity-90"
+        >
+          Add
+        </button>
+      </div>
+    </form>
+
+    <main class="max-w-5xl mx-auto mt-6">
+      <div
+        id="cardsContainer"
+        class="grid grid-cols-1 md:grid-cols-2 gap-4"
+      ></div>
+    </main>
+
+    <div
+      id="carModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50"
+    >
+      <div
+        class="bg-white rounded-2xl w-[95%] md:w-[720px] max-h-[85vh] overflow-auto p-6 relative"
+      >
+        <button
+          id="closeModal"
+          aria-label="Close"
+          class="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+        >
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <h2 id="modalTitle" class="text-2xl font-semibold mb-4"></h2>
+        <div id="modalContent" class="space-y-3 text-sm text-gray-800"></div>
+      </div>
+    </div>
+
+    <script src="../pages-js/new-car.js"></script>
+  </body>
+</html>
